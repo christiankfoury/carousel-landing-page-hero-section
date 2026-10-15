@@ -106,12 +106,6 @@ a:focus-visible {
 .primary-cta:hover svg {
   transform: translate(2px, -2px);
 }
-.nav-cta {
-  min-height: 46px;
-  padding-block: 14px;
-  border-radius: 10px;
-  font-size: 14px;
-}
 /* Place the hero copy beside the product illustration on desktop. */
 .hero {
   display: grid;
@@ -275,7 +269,7 @@ h1 {
 .dashboard-breadcrumb span {
   color: #3b3830;
 }
-.dashboard-content h3 {
+.dashboard-content h2 {
   font-weight: 500;
   letter-spacing: -0.35px;
   font-size: 19px;
@@ -439,7 +433,7 @@ h1 {
   outline: 1px solid #dfe5d8;
   outline-offset: 4px;
 }
-.phone-content h3 {
+.phone-content h2 {
   font-family: var(--font-editorial);
   font-size: 29px;
   letter-spacing: -0.7px;
@@ -611,16 +605,6 @@ h1 {
   .wordmark {
     width: 116px;
   }
-  .nav-cta {
-    font-size: 13px;
-    gap: 12px;
-    min-height: 42px;
-    padding: 13px 15px;
-  }
-  .nav-cta svg {
-    width: 16px;
-    height: 16px;
-  }
   .hero {
     padding-top: 43px;
     gap: 48px;
@@ -727,7 +711,7 @@ h1 {
   .dashboard-content {
     padding: 23px 18px 20px;
   }
-  .dashboard-content h3 {
+  .dashboard-content h2 {
     font-size: 23px;
     margin-bottom: 20px;
   }

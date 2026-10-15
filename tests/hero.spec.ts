@@ -15,12 +15,14 @@ for (const width of widths) {
     await expect(page.locator('.eyebrow')).toHaveText('CAROUSEL FOR EQUIPMENT LENDERS')
     await expect(page.locator('.hero-description')).toContainText('one mobile-first flow to verify their identity, connect their bank, and submit business details')
     await expect(page.locator('.hero-description')).toContainText('everything organized in one place, ready to review without the document chase')
-    await expect(page.getByRole('heading', { name: 'Equipment finance application', exact: true })).toBeVisible()
+    await expect(page.getByRole('heading', { level: 2, name: 'Equipment finance application', exact: true })).toBeVisible()
+    await expect(page.getByRole('heading', { level: 2, name: "You're all set.", exact: true })).toBeVisible()
     await expect(page.locator('.handoff-note')).toHaveText('From the jobsite.To your review queue.')
     await expect(page).toHaveTitle('Equipment Finance Intake & Verification | Carousel')
-    const ctas = page.getByRole('link', { name: 'Book a demo' })
-    await expect(ctas).toHaveCount(2)
-    for (const cta of await ctas.all()) await expect(cta).toHaveAttribute('href', demoUrl)
+    const cta = page.getByRole('link', { name: 'Book a demo' })
+    await expect(cta).toHaveCount(1)
+    await expect(cta).toBeVisible()
+    await expect(cta).toHaveAttribute('href', demoUrl)
     const announcement = page.getByRole('img', { name: /Carousel announces/ })
     await expect(announcement).toBeVisible()
     expect(await announcement.evaluate(img => img instanceof HTMLImageElement && img.complete && img.naturalWidth > 0 && img.naturalHeight > 0)).toBe(true)
@@ -54,7 +56,7 @@ for (const width of widths) {
 }
 
 test('keyboard skip link and focus indicators', async ({ page }) => {
-  // Keep the skip link and demo CTAs reachable with visible keyboard focus.
+  // Keep the skip link and hero CTA reachable with visible keyboard focus.
   await page.goto('/')
   await page.keyboard.press('Tab')
   const skip = page.getByRole('link', { name: 'Skip to content' })
@@ -63,12 +65,10 @@ test('keyboard skip link and focus indicators', async ({ page }) => {
   await page.keyboard.press('Tab')
   await expect(page.getByRole('link', { name: 'Carousel home' })).toBeFocused()
   await page.keyboard.press('Tab')
-  const headerCta = page.getByRole('link', { name: 'Book a demo' }).first()
-  await expect(headerCta).toBeFocused()
-  await expect(headerCta).toHaveCSS('outline-style', 'solid')
-  expect(await headerCta.evaluate(el => parseFloat(getComputedStyle(el).outlineWidth))).toBeGreaterThan(0)
-  await page.keyboard.press('Tab')
-  await expect(page.getByRole('link', { name: 'Book a demo' }).last()).toBeFocused()
+  const heroCta = page.getByRole('link', { name: 'Book a demo' })
+  await expect(heroCta).toBeFocused()
+  await expect(heroCta).toHaveCSS('outline-style', 'solid')
+  expect(await heroCta.evaluate(el => parseFloat(getComputedStyle(el).outlineWidth))).toBeGreaterThan(0)
 })
 
 test('reduced motion preserves the complete product illustration', async ({ page }) => {

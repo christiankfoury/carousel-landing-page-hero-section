@@ -9,10 +9,12 @@ Verified using Node 20.19.4 and Playwright Chromium on Windows.
 | `npm run build` (includes TypeScript checks) | Passed |
 | `npm run test:e2e` | 9 passed |
 | Responsive layout at 320, 375, 390, 768, 1024, and 1440px | No horizontal overflow or obscured key labels/icons |
-| Hero content and both demo-link destinations | Passed |
+| Hero content and demo-link destination | Passed |
 | Announcement image loading | Passed |
 | axe WCAG A/AA checks at all six widths | 0 violations |
-| Keyboard navigation | Skip link and both demo links reachable; visible focus indicator |
+| Heading hierarchy | Both product screen titles use `h2` below the hero's `h1`; checked at all six widths |
+| Lighthouse accessibility (mobile and desktop) | 100/100; heading-order audit passed |
+| Keyboard navigation | Skip link and hero demo link reachable; visible focus indicator |
 | Reduced motion | Both product screens visible without entrance animation |
 | Local fonts and initial layout stability | Passed; observed layout shift below 0.1 |
 | JavaScript runtime errors | None observed |

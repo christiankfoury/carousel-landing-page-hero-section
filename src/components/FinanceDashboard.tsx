@@ -20,7 +20,7 @@ export function FinanceDashboard() {
         </aside>
         <div className="dashboard-content">
           <p className="dashboard-breadcrumb flex items-center gap-1">Applications <ChevronRight size={11} aria-hidden="true" /> <span>{application.id}</span></p>
-          <h3>Equipment finance application</h3>
+          <h2>Equipment finance application</h2>
           <div className="applicant flex items-center gap-2.5">
             <span className="applicant-avatar">{application.initials}</span>
             <div><p>{application.name} · {application.company}</p><span>{application.id}</span></div>

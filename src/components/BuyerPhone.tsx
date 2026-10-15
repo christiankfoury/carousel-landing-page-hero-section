@@ -12,7 +12,7 @@ export function BuyerPhone() {
         <Wordmark small />
         <p className="phone-context">YOUR {application.product.toUpperCase()} APPLICATION</p>
         <div className="submitted-icon flex items-center justify-center"><Check size={25} strokeWidth={1.5} aria-hidden="true" /></div>
-        <h3>You're all set.</h3>
+        <h2>You're all set.</h2>
         <p className="phone-description">Your application has been<br />submitted successfully.</p>
         <ul className="buyer-checks">{application.checks.map(check => <VerificationRow key={check.id} check={check} perspective="buyer" />)}</ul>
         <p className="phone-reference">Application <strong>{application.id}</strong></p>
