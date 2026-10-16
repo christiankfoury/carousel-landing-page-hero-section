@@ -25,7 +25,7 @@ Desktop and mobile screenshots were visually reviewed during implementation and 
 
 ## Manual device check
 
-I manually checked the [live page](https://carousel-landing-page-hero-section.vercel.app/) on my iPhone using Safari. This was separate from the emulated viewport tests and Lighthouse audits above.
+I manually checked the [live page](https://carousel-landing-page-hero-section.vercel.app/) on my iPhone using Safari. The layout displayed correctly, and the Book a demo link opened successfully. This was separate from the emulated viewport tests and Lighthouse audits above.
 
 ## Known limitations and trade-offs
-In the mobile version, the contract phone and the lending dashboard have been stacked so that both screens remain readable and convey the applicant to lender process flow. This increases the length of the illustration and moves the perspective of the lending team further down on the screen. This layout was purposefully maintained as a different one could be tried.
+In the mobile version, the contractor phone and the lending dashboard have been stacked so that both screens remain readable and convey the applicant to lender process flow. This increases the length of the illustration and moves the perspective of the lending team further down on the screen. I kept this layout deliberately; a more compact version would be worth testing.
