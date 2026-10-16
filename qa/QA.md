@@ -21,4 +21,11 @@ Verified using Node 20.19.4 and Playwright Chromium on Windows.
 
 Responsive checks use a 900px viewport height. The layout-stability check uses a 1440x1000 viewport without network throttling.
 
-Desktop and mobile screenshots were visually reviewed during implementation and are included in [docs/screenshots](docs/screenshots/).
+Desktop and mobile screenshots were visually reviewed during implementation and are included in [docs/screenshots](../docs/screenshots/).
+
+## Manual device check
+
+I manually checked the [live page](https://carousel-landing-page-hero-section.vercel.app/) on my iPhone using Safari. This was separate from the emulated viewport tests and Lighthouse audits above.
+
+## Known limitations and trade-offs
+In the mobile version, the contract phone and the lending dashboard have been stacked so that both screens remain readable and convey the applicant to lender process flow. This increases the length of the illustration and moves the perspective of the lending team further down on the screen. This layout was purposefully maintained as a different one could be tried.
